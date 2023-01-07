@@ -19,7 +19,7 @@
             profilePic="https://images-ext-1.discordapp.net/external/RvRYNm4UaZln7oDT4EfWVwGHmP1A2iMfHTzuDfS058w/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/769125937731338290/308fbfb87154687c51e0ecea11f0bed2.webp?width=681&height=681"
             name="Hina"
             status="Playing <b>bot stuff</b>"
-            roleColor="#f1bbff"
+            roleColor="var(--hina-color)"
             isBot={true}
         />
     </div>
@@ -28,19 +28,19 @@
 <style lang="scss">
     .discord-user-bar {
         background: #2f3136;
-        width: 30%;
-        min-width: 20em;
-        height: 100%;
+        width: calc(100% - 4em);
+        // min-width: 18em;
+        height: calc(100% - 3em);
         display: block;
-        margin: 0 auto;
-        padding: 3em 3em 0;
+        margin: 0 0 0 auto;
+        padding: 3em 2em 0;
 
         .role-wrapper {
-            margin-bottom: 3.5em;
+            margin-bottom: 3.2em;
 
             .role-txt {
                 color: #96989d;
-                font-size: 1.2em;
+                font-size: 1em;
                 margin: 0 0 0.4em 0.6em;
                 user-select: none;
             }

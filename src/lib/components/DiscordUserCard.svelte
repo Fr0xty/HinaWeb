@@ -33,8 +33,8 @@
 <style lang="scss">
     .discord-user-card {
         display: flex;
-        gap: 1.5em;
-        padding: 0.2em 1em;
+        gap: 1em;
+        padding: 0.3em 0.8em;
         border-radius: 0.5em;
         cursor: pointer;
 
@@ -54,16 +54,16 @@
 
             img {
                 border-radius: 50%;
-                height: 3.8em;
+                height: 3.6em;
                 user-select: none;
             }
 
             .presence-indicator {
                 background: #3ba55c;
-                height: 1.1em;
-                width: 1.1em;
+                height: 0.95em;
+                width: 0.95em;
                 border-radius: 50%;
-                border: 0.4em solid #2f3136;
+                border: 0.35em solid #2f3136;
                 position: absolute;
                 right: -9%;
                 bottom: -3%;
@@ -84,16 +84,16 @@
                 display: flex;
                 align-items: center;
                 justify-content: left;
-                gap: 0.6em;
+                gap: 0.5em;
 
                 .name-txt {
-                    font-size: 1.6em;
+                    font-size: 1.4em;
                 }
 
                 .bot-indicator {
                     color: white;
-                    font-size: 0.9em;
-                    padding: 0.3em 0.6em;
+                    font-size: 0.8em;
+                    padding: 0.1em 0.5em;
                     border-radius: 0.3em;
                     background: #5865f2;
                     letter-spacing: -0.05em;
@@ -106,12 +106,11 @@
                 gap: 0.5em;
 
                 .status-txt {
-                    font-size: 1.2em;
                     color: gray;
                 }
 
                 .status-icon {
-                    height: 1em;
+                    height: 0.8em;
                     margin: auto 0;
                 }
             }
