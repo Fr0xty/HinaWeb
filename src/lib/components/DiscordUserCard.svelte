@@ -40,6 +40,10 @@
 
         &:hover {
             background: #3c3f45;
+
+            .avatar .presence-indicator {
+                border-color: #3c3f45;
+            }
         }
 
         .avatar {
