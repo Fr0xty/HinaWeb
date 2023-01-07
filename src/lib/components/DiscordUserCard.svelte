@@ -6,6 +6,7 @@
     export let status: string;
     export let statusIcon: boolean = false;
     export let roleColor: string;
+    export let isBot: boolean = false;
 </script>
 
 <div class="discord-user-card">
@@ -14,7 +15,12 @@
         <div class="presence-indicator" />
     </div>
     <div class="text-box">
-        <p class="name" style="color: {roleColor};">{name}</p>
+        <div class="name">
+            <p class="name-txt" style="color: {roleColor};">{name}</p>
+            {#if isBot}
+                <span class="bot-indicator">BOT</span>
+            {/if}
+        </div>
         <div class="status">
             <p class="status-txt">{@html status}</p>
             {#if statusIcon}
@@ -65,13 +71,29 @@
             padding: 0.2em 0;
             user-select: none;
 
-            .name,
+            .name-txt,
             .status-txt {
                 margin: 0;
             }
 
             .name {
-                font-size: 1.6em;
+                display: flex;
+                align-items: center;
+                justify-content: left;
+                gap: 0.6em;
+
+                .name-txt {
+                    font-size: 1.6em;
+                }
+
+                .bot-indicator {
+                    color: white;
+                    font-size: 0.9em;
+                    padding: 0.3em 0.6em;
+                    border-radius: 0.3em;
+                    background: #5865f2;
+                    letter-spacing: -0.05em;
+                }
             }
 
             .status {

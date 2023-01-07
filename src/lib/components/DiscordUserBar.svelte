@@ -20,6 +20,7 @@
             name="Hina"
             status="Playing <b>bot stuff</b>"
             roleColor="#f1bbff"
+            isBot={true}
         />
     </div>
 </div>
