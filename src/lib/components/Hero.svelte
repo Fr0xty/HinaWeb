@@ -1,5 +1,5 @@
 <script lang="ts">
-    import DiscordCanvas from './DiscordCanvas.svelte';
+    import DiscordCanvas from '$lib/components/DiscordCanvas.svelte';
 </script>
 
 <div class="hero">

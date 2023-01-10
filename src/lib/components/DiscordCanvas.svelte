@@ -1,6 +1,6 @@
 <script lang="ts">
-    import DiscordCanvasContent from './DiscordCanvasContent.svelte';
-    import DiscordUserBar from './DiscordUserBar.svelte';
+    import DiscordCanvasContent from '$lib/components/DiscordCanvasContent.svelte';
+    import DiscordUserBar from '$lib/components/DiscordUserBar.svelte';
 </script>
 
 <div class="discord-canvas">

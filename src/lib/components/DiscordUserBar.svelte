@@ -1,5 +1,5 @@
 <script lang="ts">
-    import DiscordUserCard from './DiscordUserCard.svelte';
+    import DiscordUserCard from '$lib/components/DiscordUserCard.svelte';
 </script>
 
 <div class="discord-user-bar">
