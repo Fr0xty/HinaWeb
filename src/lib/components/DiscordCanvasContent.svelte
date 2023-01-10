@@ -82,4 +82,36 @@
             }
         }
     }
+
+    @media (max-width: 1010px) {
+        .discord-canvas-content {
+            justify-content: center;
+
+            .content-wrapper {
+                margin-left: 0;
+
+                .description {
+                    margin-top: 3em;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 500px) {
+        .discord-canvas-content .content-wrapper {
+            .title-wrapper {
+                h2 {
+                    font-size: 2.3em;
+                }
+
+                h1 {
+                    font-size: 3.9em;
+                }
+            }
+
+            .description {
+                font-size: 0.8em;
+            }
+        }
+    }
 </style>

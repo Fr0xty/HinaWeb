@@ -17,9 +17,17 @@
         grid-template-columns: 75% 25%;
     }
 
-    @media (max-width: 1090px) {
+    @media (max-width: 1200px) {
         .discord-canvas {
-            grid-template-columns: 72% 28%;
+            grid-template-columns: 70% 30%;
+        }
+    }
+
+    @media (max-width: 1010px) {
+        .discord-canvas {
+            display: flex;
+            align-items: center;
+            position: relative;
         }
     }
 </style>
