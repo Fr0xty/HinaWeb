@@ -22,11 +22,4 @@
             grid-template-columns: 72% 28%;
         }
     }
-
-    @media (max-width: 1010px) {
-        .discord-canvas {
-            display: block;
-            position: relative;
-        }
-    }
 </style>
