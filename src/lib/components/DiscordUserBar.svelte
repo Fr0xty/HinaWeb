@@ -90,11 +90,10 @@
 
             .toggle-user-tab-btn {
                 display: block !important;
-                height: 2em;
+                height: 3em;
                 position: absolute;
                 top: 3em;
                 right: 3.5em;
-                padding: 0.4em;
                 border-radius: 50%;
 
                 &:hover {
