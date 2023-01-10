@@ -11,10 +11,22 @@
 <style lang="scss">
     .discord-canvas {
         background: #36393f;
-        height: 100vh;
-        width: 100vw;
-        font-family: 'Open Sans', sans-serif;
+        min-height: 100%;
+        min-width: 100%;
         display: grid;
         grid-template-columns: 75% 25%;
+    }
+
+    @media (max-width: 1090px) {
+        .discord-canvas {
+            grid-template-columns: 72% 28%;
+        }
+    }
+
+    @media (max-width: 1010px) {
+        .discord-canvas {
+            display: block;
+            position: relative;
+        }
     }
 </style>

@@ -116,4 +116,47 @@
             }
         }
     }
+
+    @media (max-width: 1350px) {
+        .discord-user-card {
+            gap: 0.9em;
+
+            .avatar {
+                img {
+                    height: 3em;
+                }
+
+                .presence-indicator {
+                    height: 0.8em;
+                    width: 0.8em;
+                }
+            }
+
+            .text-box {
+                .name {
+                    gap: 0.4em;
+
+                    .name-txt {
+                        font-size: 1.2em;
+                    }
+
+                    .bot-indicator {
+                        font-size: 0.7em;
+                    }
+                }
+
+                .status {
+                    gap: 0.4em;
+
+                    .status-txt {
+                        font-size: 0.9em;
+                    }
+
+                    .status-icon {
+                        height: 0.7em;
+                    }
+                }
+            }
+        }
+    }
 </style>

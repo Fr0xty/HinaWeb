@@ -29,7 +29,6 @@
     .discord-user-bar {
         background: #2f3136;
         width: calc(100% - 4em);
-        // min-width: 18em;
         height: calc(100% - 3em);
         display: block;
         margin: 0 0 0 auto;
@@ -37,12 +36,28 @@
 
         .role-wrapper {
             margin-bottom: 3.2em;
+            white-space: nowrap;
 
             .role-txt {
                 color: #96989d;
                 font-size: 1em;
                 margin: 0 0 0.4em 0.6em;
                 user-select: none;
+            }
+        }
+    }
+
+    @media (max-width: 1350px) {
+        .discord-user-bar {
+            width: calc(100% - 3em);
+            padding: 3em 1.5em 0;
+
+            .role-wrapper {
+                margin-bottom: 2.7em;
+
+                .role-txt {
+                    font-size: 0.9em;
+                }
             }
         }
     }

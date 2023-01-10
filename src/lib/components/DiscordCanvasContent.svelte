@@ -21,9 +21,11 @@
 
         .content-wrapper {
             display: block;
-            margin-left: 5em;
+            margin-left: 13em;
 
             .title-wrapper {
+                margin-top: 5em;
+
                 h2 {
                     font-size: 3.5em;
                     margin: 0;
@@ -56,7 +58,27 @@
             .description {
                 color: white;
                 font-size: 1.3em;
-                margin-top: 5em;
+                margin: 5em 0;
+            }
+        }
+    }
+
+    @media (max-width: 1350px) {
+        .discord-canvas-content .content-wrapper {
+            margin-left: 8em;
+
+            .title-wrapper {
+                h2 {
+                    font-size: 3em;
+                }
+
+                h1 {
+                    font-size: 5.1em;
+                }
+            }
+
+            .description {
+                font-size: 1.1em;
             }
         }
     }
