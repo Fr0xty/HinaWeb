@@ -7,14 +7,13 @@
     };
 </script>
 
+<img
+    src={DiscordUserTabIcon}
+    alt="toggle user side tab"
+    class="toggle-user-tab-btn"
+    on:click|preventDefault={toggleUserTabBtnOnClick}
+/>
 <div class="discord-user-bar">
-    <img
-        src={DiscordUserTabIcon}
-        alt="toggle user side tab"
-        class="toggle-user-tab-btn"
-        on:click|preventDefault={toggleUserTabBtnOnClick}
-    />
-
     <div class="content-wrapper">
         <div class="role-wrapper">
             <p class="role-txt">DEVELOPER — 1</p>
@@ -40,6 +39,10 @@
 </div>
 
 <style lang="scss">
+    .toggle-user-tab-btn {
+        display: none;
+    }
+
     .discord-user-bar {
         background: #2f3136;
         width: calc(100% - 4em);
@@ -47,10 +50,6 @@
         display: block;
         margin: 0 0 0 auto;
         padding: 5em 2em 0;
-
-        .toggle-user-tab-btn {
-            display: none;
-        }
 
         .content-wrapper {
             .role-wrapper {
@@ -82,24 +81,28 @@
     }
 
     @media (max-width: 1010px) {
+        .toggle-user-tab-btn {
+            display: block !important;
+            position: fixed;
+            height: 3em;
+            position: fixed;
+            top: 3em;
+            right: 3em;
+            border-radius: 50%;
+            transition: outline 0.2s;
+            z-index: 1;
+
+            &:hover {
+                outline: 1px solid white;
+            }
+        }
+
         .discord-user-bar {
             position: absolute;
             top: 0;
             right: 0;
             width: 80%;
-
-            .toggle-user-tab-btn {
-                display: block !important;
-                height: 3em;
-                position: absolute;
-                top: 3em;
-                right: 3.5em;
-                border-radius: 50%;
-
-                &:hover {
-                    outline: 1px solid white;
-                }
-            }
+            transition: transform 0.4s ease-in-out;
 
             .content-wrapper {
                 margin-top: 1.5em;
@@ -107,11 +110,7 @@
         }
 
         .discord-user-bar:not(.show-nav) {
-            background: none;
-
-            .content-wrapper {
-                display: none;
-            }
+            transform: translateX(100%);
         }
     }
 </style>
