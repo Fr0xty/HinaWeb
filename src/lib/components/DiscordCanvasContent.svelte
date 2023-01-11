@@ -13,11 +13,24 @@
 </div>
 
 <style lang="scss">
+    @keyframes SlideIn {
+        0% {
+            opacity: 0;
+            transform: translateX(-100%);
+        }
+
+        100% {
+            transform: translateX(0%);
+            opacity: 1;
+        }
+    }
+
     .discord-canvas-content {
         height: 100%;
         width: 100%;
         display: flex;
         align-items: center;
+        user-select: none;
 
         .content-wrapper {
             display: block;
@@ -25,6 +38,7 @@
 
             .title-wrapper {
                 margin-top: 5em;
+                animation: SlideIn 1.5s cubic-bezier(0.37, 1.07, 1, 1) forwards;
 
                 h2 {
                     font-size: 3.5em;
@@ -59,6 +73,9 @@
                 color: white;
                 font-size: 1.3em;
                 margin: 5em 0;
+                opacity: 0;
+                animation: SlideIn 1.5s cubic-bezier(0.37, 1.07, 1, 1) forwards;
+                animation-delay: 1s;
             }
         }
     }
