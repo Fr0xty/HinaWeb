@@ -1,30 +1,29 @@
+<script lang="ts">
+    import { quintOut } from 'svelte/easing';
+    import { fly } from 'svelte/transition';
+    import { onMount } from 'svelte';
+
+    let componentMounted = false;
+    onMount(() => (componentMounted = true));
+</script>
+
 <div class="discord-canvas-content">
     <div class="content-wrapper">
-        <div class="title-wrapper">
-            <h2>This is</h2>
-            <h1>Hina<span>Web</span></h1>
-        </div>
+        {#if componentMounted}
+            <div class="title-wrapper" transition:fly={{ x: -1000, duration: 3000, easing: quintOut }}>
+                <h2>This is</h2>
+                <h1>Hina<span>Web</span></h1>
+            </div>
 
-        <p class="description">
-            A powerful Discord Bot, <br />
-            feature-packed and reliable.
-        </p>
+            <p class="description" transition:fly={{ x: -1000, duration: 2500, delay: 1000, easing: quintOut }}>
+                A powerful Discord Bot, <br />
+                feature-packed and reliable.
+            </p>
+        {/if}
     </div>
 </div>
 
 <style lang="scss">
-    @keyframes SlideIn {
-        0% {
-            opacity: 0;
-            transform: translateX(-100%);
-        }
-
-        100% {
-            transform: translateX(0%);
-            opacity: 1;
-        }
-    }
-
     .discord-canvas-content {
         height: 100%;
         width: 100%;
@@ -38,7 +37,6 @@
 
             .title-wrapper {
                 margin-top: 5em;
-                animation: SlideIn 1.5s cubic-bezier(0.37, 1.07, 1, 1) forwards;
 
                 h2 {
                     font-size: 3.5em;
@@ -73,9 +71,6 @@
                 color: white;
                 font-size: 1.3em;
                 margin: 5em 0;
-                opacity: 0;
-                animation: SlideIn 1.5s cubic-bezier(0.37, 1.07, 1, 1) forwards;
-                animation-delay: 1s;
             }
         }
     }
