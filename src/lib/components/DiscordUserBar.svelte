@@ -83,9 +83,8 @@
     @media (max-width: 1010px) {
         .toggle-user-tab-btn {
             display: block !important;
-            position: fixed;
+            position: absolute;
             height: 3em;
-            position: fixed;
             top: 3em;
             right: 3em;
             border-radius: 50%;
