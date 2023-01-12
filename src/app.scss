@@ -4,7 +4,24 @@
 body {
     margin: 0;
     padding: 0;
+    overflow-y: overlay;
     -webkit-tap-highlight-color: transparent;
+}
+
+body:not(.scroll) {
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--hina-color);
+    border-radius: 8em;
+    border: 1px solid black;
 }
 
 // global variables
