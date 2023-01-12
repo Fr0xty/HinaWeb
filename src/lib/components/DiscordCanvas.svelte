@@ -26,7 +26,7 @@
             position: absolute;
             left: 0;
             right: 0;
-            bottom: 4%;
+            bottom: 8%;
             display: flex;
             justify-content: center;
         }

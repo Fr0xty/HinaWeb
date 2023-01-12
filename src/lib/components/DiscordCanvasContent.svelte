@@ -91,6 +91,7 @@
 
             .description {
                 font-size: 1.1em;
+                margin-bottom: 8em;
             }
         }
     }
