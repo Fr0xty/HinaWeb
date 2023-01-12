@@ -7,7 +7,7 @@
 </script>
 
 {#if componentMounted}
-    <div class="scroll-hint" in:fade={{ duration: 1000, delay: 1500 }}>
+    <div class="scroll-hint" title="Scroll to see more." in:fade={{ duration: 1000, delay: 1500 }}>
         <div class="point" />
     </div>
 {/if}
