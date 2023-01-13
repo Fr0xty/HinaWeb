@@ -10,12 +10,14 @@
 <div class="discord-canvas-content">
     <div class="content-wrapper">
         {#if componentMounted}
-            <div class="title-wrapper" transition:fly={{ x: -1000, duration: 3000, easing: quintOut }}>
-                <h2>This is</h2>
-                <h1>Hina<span>Web</span></h1>
+            <div class="title-wrapper">
+                <h2 transition:fly={{ x: -1000, duration: 3000, easing: quintOut }}>This is</h2>
+                <h1 transition:fly={{ x: -1000, duration: 4000, delay: 700, easing: quintOut }}>
+                    Hina<span>Web</span>
+                </h1>
             </div>
 
-            <p class="description" transition:fly={{ x: -1000, duration: 2500, delay: 1000, easing: quintOut }}>
+            <p class="description" transition:fly={{ x: -1000, duration: 2500, delay: 2200, easing: quintOut }}>
                 A powerful Discord Bot, <br />
                 feature-packed and reliable.
             </p>
@@ -49,17 +51,12 @@
                 }
 
                 h1 {
-                    font-size: 6em;
+                    font-size: 8em;
                     margin: 0;
-                    margin-left: 0.1em;
+                    margin-left: 1em;
                     color: var(--hina-color);
-                    text-shadow: rgb(0, 0, 0) 2px 0px 0px, rgb(0, 0, 0) 1.75517px 0.958851px 0px,
-                        rgb(0, 0, 0) 1.0806px 1.68294px 0px, rgb(0, 0, 0) 0.141474px 1.99499px 0px,
-                        rgb(0, 0, 0) -0.832294px 1.81859px 0px, rgb(0, 0, 0) -1.60229px 1.19694px 0px,
-                        rgb(0, 0, 0) -1.97998px 0.28224px 0px, rgb(0, 0, 0) -1.87291px -0.701566px 0px,
-                        rgb(0, 0, 0) -1.30729px -1.5136px 0px, rgb(0, 0, 0) -0.421592px -1.95506px 0px,
-                        rgb(0, 0, 0) 0.567324px -1.91785px 0px, rgb(0, 0, 0) 1.41734px -1.41108px 0px,
-                        rgb(0, 0, 0) 1.92034px -0.558831px 0px;
+                    transform: rotate(-2deg);
+                    font-family: 'Rochester', cursive;
 
                     span {
                         color: rgb(218, 217, 217);
@@ -85,7 +82,7 @@
                 }
 
                 h1 {
-                    font-size: 5.1em;
+                    font-size: 7.5em;
                 }
             }
 
@@ -110,7 +107,24 @@
         }
     }
 
-    @media (max-width: 500px) {
+    @media (max-width: 630px) {
+        .discord-canvas-content .content-wrapper {
+            .title-wrapper {
+                h2 {
+                    font-size: 2.6em;
+                }
+
+                h1 {
+                    font-size: 5em;
+                }
+            }
+
+            .description {
+                font-size: 0.9em;
+            }
+        }
+    }
+    @media (max-width: 480px) {
         .discord-canvas-content .content-wrapper {
             .title-wrapper {
                 h2 {
