@@ -1,16 +1,32 @@
 <script lang="ts">
     import DiscordCanvasContent from '$lib/components/DiscordCanvasContent.svelte';
     import DiscordUserBar from '$lib/components/DiscordUserBar.svelte';
+    import { onMount } from 'svelte';
+    import { fade } from 'svelte/transition';
     import ScrollHint from './ScrollHint.svelte';
+
+    let showScrollHint = true;
+
+    onMount(() => {
+        document.addEventListener('scroll', () => {
+            if (window.scrollY === 0) {
+                showScrollHint = true;
+            } else {
+                showScrollHint = false;
+            }
+        });
+    });
 </script>
 
 <div class="discord-canvas">
     <DiscordCanvasContent />
     <DiscordUserBar />
 
-    <div class="scroll-hint">
-        <ScrollHint />
-    </div>
+    {#if showScrollHint}
+        <div class="scroll-hint" out:fade={{ duration: 1000 }}>
+            <ScrollHint />
+        </div>
+    {/if}
 </div>
 
 <style lang="scss">
