@@ -1,9 +1,9 @@
 <script lang="ts">
     import DiscordCanvasContent from '$lib/components/DiscordCanvasContent.svelte';
     import DiscordUserBar from '$lib/components/DiscordUserBar.svelte';
+    import ScrollHint from '$lib/components/ScrollHint.svelte';
     import { onMount } from 'svelte';
     import { fade } from 'svelte/transition';
-    import ScrollHint from './ScrollHint.svelte';
 
     let showScrollHint = true;
 

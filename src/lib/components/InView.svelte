@@ -9,10 +9,9 @@
     let unique = {};
     let displaySlot = false;
     let inViewElement: HTMLDivElement;
-    let scrollEventListener: any;
 
     onMount(() => {
-        scrollEventListener = document.addEventListener('scroll', function eventListenerFunction() {
+        document.addEventListener('scroll', function eventListenerFunction() {
             console.log('scroll');
 
             /**
