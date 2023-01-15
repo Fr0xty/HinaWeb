@@ -4,8 +4,8 @@
 </script>
 
 <div class="features">
-    <InView thresholdPercent={0}>
-        <h2 class="title" in:fade={{ duration: 400 }}>WHAT <br />CAN I <br />DO?</h2>
+    <InView thresholdPercent={10}>
+        <h2 class="title" in:fade={{ duration: 800 }}>WHAT <br />CAN I <br />DO?</h2>
     </InView>
 </div>
 

@@ -4,10 +4,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Rochester&display=swap');
 // font-family: 'Rochester', cursive;
 
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,400&display=swap');
+// font-family: 'Karla', sans-serif;
+
 body {
     margin: 0;
     padding: 0;
     overflow-y: overlay;
+    font-family: 'Karla', sans-serif;
     -webkit-tap-highlight-color: transparent;
 }
 
