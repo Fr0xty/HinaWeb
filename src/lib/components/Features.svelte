@@ -4,32 +4,117 @@
 </script>
 
 <div class="features">
+    <div class="wave-wrapper wave-animation">
+        <div class="wave-wrapper-inner bg-top">
+            <div class="wave wave-top" />
+        </div>
+        <div class="wave-wrapper-inner bg-middle">
+            <div class="wave wave-middle" />
+        </div>
+        <div class="wave-wrapper-inner bg-bottom">
+            <div class="wave wave-bottom" />
+        </div>
+    </div>
     <InView thresholdPercent={10}>
         <h2 class="title" in:fade={{ duration: 800 }}>WHAT <br />CAN I <br />DO?</h2>
     </InView>
 </div>
 
 <style lang="scss">
+    @keyframes MoveWave {
+        0% {
+            transform: translateX(0) translateZ(0) scaleY(1);
+        }
+        50% {
+            transform: translateX(-25%) translateZ(0) scaleY(0.55);
+        }
+        100% {
+            transform: translateX(-50%) translateZ(0) scaleY(1);
+        }
+    }
+
     .features {
         min-height: 100vh;
         background: rgba($color: var(--hina-color-rgb), $alpha: 0.7);
+        background: linear-gradient(to bottom, pink 30%, var(--hina-color) 60%);
         position: relative;
         padding: 1em;
 
-        &::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba($color: #000, $alpha: 0.08);
-        }
-
         .title {
             font-size: 4em;
-            margin: 1.5em 1em;
-            color: rgb(92, 6, 149);
+            margin: 2.5em 1em;
+            color: #b03765;
+        }
+
+        .wave-wrapper {
+            overflow: hidden;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            height: 10em;
+
+            .wave-wrapper-inner {
+                position: absolute;
+                width: 100%;
+                overflow: hidden;
+                height: 100%;
+                bottom: 0px;
+
+                &.bg-top {
+                    z-index: 15;
+                    opacity: 0.5;
+                }
+
+                &.bg-middle {
+                    z-index: 10;
+                    opacity: 0.75;
+                }
+
+                &.bg-bottom {
+                    z-index: 5;
+                }
+
+                .wave {
+                    position: absolute;
+                    left: 0;
+                    width: 200%;
+                    height: 100%;
+                    background-repeat: repeat no-repeat;
+                    background-position: 0 top;
+                    transform-origin: center top;
+
+                    &.wave-top {
+                        background-image: url('$lib/images/wave-top.webp');
+                        background-size: 50% 100px;
+                    }
+
+                    &.wave-middle {
+                        background-image: url('$lib/images/wave-mid.webp');
+                        background-size: 50% 120px;
+                    }
+
+                    &.wave-bottom {
+                        background-image: url('$lib/images/wave-bot.webp');
+                        background-size: 50% 100px;
+                    }
+                }
+            }
+        }
+
+        .wave-animation {
+            .wave-top {
+                animation: move-wave 3s;
+                -webkit-animation: move-wave 3s;
+                -webkit-animation-delay: 1s;
+                animation-delay: 1s;
+            }
+            .wave-middle {
+                animation: MoveWave 10s linear infinite;
+            }
+            .wave-bottom {
+                animation: MoveWave 15s linear infinite;
+            }
         }
     }
 </style>

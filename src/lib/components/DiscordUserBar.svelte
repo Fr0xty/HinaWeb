@@ -44,7 +44,7 @@
     }
 
     .discord-user-bar {
-        background: #2f3136;
+        background: linear-gradient(to bottom, #2f3136 80%, #36393f);
         width: calc(100% - 4em);
         height: calc(100% - 5em);
         display: block;
