@@ -1,6 +1,7 @@
 <script lang="ts">
     import AvatarHistoryFeature from '$lib/components/AvatarHistoryFeature.svelte';
     import InView from '$lib/components/InView.svelte';
+    import MusicFeature from '$lib/components/MusicFeature.svelte';
     import TranslateFeature from '$lib/components/TranslateFeature.svelte';
     import { fade } from 'svelte/transition';
 </script>
@@ -28,6 +29,8 @@
             <AvatarHistoryFeature />
             <hr />
             <TranslateFeature />
+            <hr />
+            <MusicFeature />
         </div>
     </div>
 </div>
