@@ -41,6 +41,11 @@ code {
     border: 1px solid black;
 }
 
+::selection {
+    color: var(--hina-color);
+    background: var(--secondary-black);
+}
+
 // global variables
 :root {
     --hina-color: #f1bbff;
