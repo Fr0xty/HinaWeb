@@ -31,8 +31,12 @@
             <TranslateFeature />
             <hr />
             <MusicFeature />
+            <hr />
+            <h3 class="and-more-txt">And more...</h3>
         </div>
     </div>
+
+    <div class="bottom-transition" />
 </div>
 
 <style lang="scss">
@@ -146,7 +150,23 @@
                     margin: 1em 0;
                     border: none;
                 }
+
+                .and-more-txt {
+                    font-size: 1.5em;
+                    margin: 3em 0;
+                    text-align: center;
+                    color: #520020;
+                }
             }
+        }
+
+        .bottom-transition {
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 8em;
+            background: var(--hina-color);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 36%);
         }
     }
 </style>
