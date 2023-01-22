@@ -1,6 +1,6 @@
 <script lang="ts">
     import DiscordUserCard from '$lib/components/DiscordUserCard.svelte';
-    import DiscordUserTabIcon from '$lib/images/discord_user_tab_icon.webp';
+    import DiscordUserTabIcon from '$lib/assets/images/discord_user_tab_icon.webp';
 
     const toggleUserTabBtnOnClick = () => {
         document.querySelector('.discord-user-bar')?.classList.toggle('show-nav');

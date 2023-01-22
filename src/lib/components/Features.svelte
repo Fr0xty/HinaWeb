@@ -1,7 +1,8 @@
 <script lang="ts">
+    import AvatarHistoryFeature from '$lib/components/AvatarHistoryFeature.svelte';
     import InView from '$lib/components/InView.svelte';
+    import TranslateFeature from '$lib/components/TranslateFeature.svelte';
     import { fade } from 'svelte/transition';
-    import AvatarHistoryFeature from './AvatarHistoryFeature.svelte';
 </script>
 
 <div class="features">
@@ -26,6 +27,7 @@
             <hr />
             <AvatarHistoryFeature />
             <hr />
+            <TranslateFeature />
         </div>
     </div>
 </div>
@@ -89,17 +91,17 @@
                     transform-origin: center top;
 
                     &.wave-top {
-                        background-image: url('$lib/images/wave-top.webp');
+                        background-image: url('$lib/assets/images/wave-top.webp');
                         background-size: 50% 100px;
                     }
 
                     &.wave-middle {
-                        background-image: url('$lib/images/wave-mid.webp');
+                        background-image: url('$lib/assets/images/wave-mid.webp');
                         background-size: 50% 120px;
                     }
 
                     &.wave-bottom {
-                        background-image: url('$lib/images/wave-bot.webp');
+                        background-image: url('$lib/assets/images/wave-bot.webp');
                         background-size: 50% 100px;
                     }
                 }

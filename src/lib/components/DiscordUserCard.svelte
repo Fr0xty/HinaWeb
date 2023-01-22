@@ -1,5 +1,5 @@
 <script lang="ts">
-    import DiscordPresenceIcon from '$lib/images/discord_presence_icon.webp';
+    import DiscordPresenceIcon from '$lib/assets/images/discord_presence_icon.webp';
 
     export let profilePic: string;
     export let name: string;

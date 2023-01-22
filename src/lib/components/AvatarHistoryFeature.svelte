@@ -1,7 +1,7 @@
 <script lang="ts">
     import InView from '$lib/components/InView.svelte';
-    import AvatarChangeVisual from '$lib/images/avatar_change_visual.webp';
-    import AvatarGallery from '$lib/images/avatar_gallery.webp';
+    import AvatarChangeVisual from '$lib/assets/images/avatar_change_visual.webp';
+    import AvatarGallery from '$lib/assets/images/avatar_gallery.webp';
     import Zoom from '$lib/transitions/Zoom';
 </script>
 
