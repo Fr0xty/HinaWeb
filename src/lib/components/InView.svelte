@@ -43,3 +43,10 @@
         <slot />
     {/key}
 </div>
+
+<style lang="scss">
+    .in-view {
+        width: fit-content;
+        height: fit-content;
+    }
+</style>
