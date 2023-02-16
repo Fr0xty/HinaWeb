@@ -19,19 +19,26 @@
             <code>/avatarhistory</code>
         </div>
     </div>
-    <InView thresholdPercent={10}>
-        <img src={AvatarGallery} alt="avatar gallery example" class="img-2" in:Zoom={{ duration: 300, delay: 100 }} />
-    </InView>
+    <div class="in-view-2">
+        <InView thresholdPercent={10}>
+            <img
+                src={AvatarGallery}
+                alt="avatar gallery example"
+                class="img-2"
+                in:Zoom={{ duration: 300, delay: 100 }}
+            />
+        </InView>
+    </div>
 </div>
 
 <style lang="scss">
     .avatar-history-section {
         position: relative;
         display: flex;
-        justify-content: left;
+        justify-content: space-evenly;
         align-items: center;
         margin: 2em;
-        gap: 4em;
+        gap: 3em;
 
         .text {
             display: block;
@@ -63,6 +70,64 @@
                 width: 22em;
                 border-radius: 0.8em;
                 transform: rotate(2deg);
+            }
+        }
+    }
+
+    @media (max-width: 1490px) {
+        .avatar-history-section {
+            gap: 2.2em;
+
+            .text {
+                h3 {
+                    font-size: 1.7em;
+                }
+
+                p {
+                    font-size: 1.2em;
+                }
+
+                .code {
+                    font-size: 1em;
+                }
+            }
+
+            img {
+                &.img-1 {
+                    width: 12em;
+                }
+                &.img-2 {
+                    width: 17.6em;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1000px) {
+        .avatar-history-section {
+            display: block;
+
+            .text {
+                width: 80%;
+                margin: 1em auto;
+            }
+
+            img {
+                &.img-1 {
+                    width: 12em;
+                    margin-left: 2em;
+                }
+
+                &.img-2 {
+                    width: 17.6em;
+                    margin-right: 2em;
+                    margin-top: 2em;
+                }
+            }
+
+            .in-view-2 {
+                display: flex;
+                justify-content: right;
             }
         }
     }

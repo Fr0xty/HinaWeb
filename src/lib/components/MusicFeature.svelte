@@ -25,9 +25,11 @@
             <code>/skip</code>
         </div>
     </div>
-    <InView thresholdPercent={10}>
-        <img src={VoiceChannelWithHinaVisual} alt="being in the same vc as hina" in:Zoom={{ duration: 300 }} />
-    </InView>
+    <div class="in-view">
+        <InView thresholdPercent={10}>
+            <img src={VoiceChannelWithHinaVisual} alt="being in the same vc as hina" in:Zoom={{ duration: 300 }} />
+        </InView>
+    </div>
 </div>
 
 <style lang="scss">
@@ -67,6 +69,46 @@
             border-radius: 0.4em;
             height: 18em;
             transform: rotate(-3deg);
+        }
+    }
+
+    @media (max-width: 1490px) {
+        .music-section {
+            gap: 2.2em;
+
+            .text {
+                h3 {
+                    font-size: 1.7em;
+                }
+
+                p {
+                    font-size: 1.2em;
+                }
+
+                .code {
+                    font-size: 1em;
+                }
+            }
+
+            img {
+                height: 14.5em;
+            }
+        }
+    }
+
+    @media (max-width: 1000px) {
+        .music-section {
+            display: block;
+
+            .text {
+                width: 90%;
+                margin: 0 auto 3em;
+            }
+
+            .in-view {
+                display: flex;
+                justify-content: center;
+            }
         }
     }
 </style>

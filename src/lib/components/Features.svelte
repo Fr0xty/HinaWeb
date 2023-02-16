@@ -169,4 +169,41 @@
             clip-path: polygon(0 0, 100% 0, 100% 100%, 0 36%);
         }
     }
+
+    @media (max-width: 1490px) {
+        .features .outer-content-wrapper {
+            grid-template-columns: 15% 85%;
+
+            .title {
+                font-size: 3em;
+                margin: 3em 0 0 0.5em;
+            }
+
+            .inner-content-wrapper {
+                padding-top: 15em;
+            }
+        }
+    }
+
+    @media (max-width: 1150px) {
+        .features .outer-content-wrapper {
+            display: block;
+
+            .inner-content-wrapper {
+                padding-top: 3em;
+            }
+        }
+    }
+
+    @media (max-width: 1000px) {
+        .features .outer-content-wrapper .inner-content-wrapper {
+            padding: 1em;
+        }
+    }
+
+    @media (max-width: 500px) {
+        .features .outer-content-wrapper .inner-content-wrapper {
+            padding: 0em;
+        }
+    }
 </style>

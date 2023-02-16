@@ -5,9 +5,11 @@
 </script>
 
 <div class="translate-section">
-    <InView thresholdPercent={10}>
-        <img src={HinaTranslateExample} alt="translate example" in:Zoom={{ duration: 300 }} />
-    </InView>
+    <div class="in-view">
+        <InView thresholdPercent={10}>
+            <img src={HinaTranslateExample} alt="translate example" in:Zoom={{ duration: 300 }} />
+        </InView>
+    </div>
     <div class="text">
         <h3>Translate messages to and from any language.</h3>
         <p>No more out-of-the-way translating; Hina helps remove language barriers!</p>
@@ -49,6 +51,52 @@
 
         img {
             border-radius: 0.2em;
+        }
+    }
+
+    @media (max-width: 1490px) {
+        .translate-section {
+            gap: 2.2em;
+
+            .text {
+                h3 {
+                    font-size: 1.7em;
+                }
+
+                p {
+                    font-size: 1.2em;
+                }
+
+                .code {
+                    font-size: 1em;
+                }
+            }
+
+            img {
+                width: 32em;
+            }
+        }
+    }
+
+    @media (max-width: 1000px) {
+        .translate-section {
+            display: block;
+
+            .in-view {
+                display: flex;
+                justify-content: center;
+            }
+
+            .text {
+                width: 90%;
+                margin: 2em auto 0;
+            }
+        }
+    }
+
+    @media (max-width: 600px) {
+        .translate-section img {
+            width: 100%;
         }
     }
 </style>
