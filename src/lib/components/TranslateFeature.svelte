@@ -7,7 +7,7 @@
 <div class="translate-section">
     <div class="in-view">
         <InView thresholdPercent={10}>
-            <img src={HinaTranslateExample} alt="translate example" in:Zoom={{ duration: 300 }} />
+            <img src={HinaTranslateExample} alt="translate example" in:Zoom={{ duration: 150 }} />
         </InView>
     </div>
     <div class="text">
@@ -97,6 +97,16 @@
     @media (max-width: 600px) {
         .translate-section img {
             width: 100%;
+        }
+    }
+
+    @media (max-width: 670px) {
+        .translate-section {
+            margin: 2em 0;
+
+            .text {
+                width: 95%;
+            }
         }
     }
 </style>

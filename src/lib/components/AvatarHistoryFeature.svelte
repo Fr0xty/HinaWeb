@@ -7,7 +7,7 @@
 
 <div class="avatar-history-section">
     <InView thresholdPercent={10}>
-        <img src={AvatarChangeVisual} alt="avatar change visual" class="img-1" in:Zoom={{ duration: 300 }} />
+        <img src={AvatarChangeVisual} alt="avatar change visual" class="img-1" in:Zoom={{ duration: 150 }} />
     </InView>
     <div class="text">
         <h3>See your avatar change history.</h3>
@@ -25,7 +25,7 @@
                 src={AvatarGallery}
                 alt="avatar gallery example"
                 class="img-2"
-                in:Zoom={{ duration: 300, delay: 100 }}
+                in:Zoom={{ duration: 150, delay: 100 }}
             />
         </InView>
     </div>
@@ -128,6 +128,16 @@
             .in-view-2 {
                 display: flex;
                 justify-content: right;
+            }
+        }
+    }
+
+    @media (max-width: 670px) {
+        .avatar-history-section {
+            margin: 2em 0;
+
+            .text {
+                width: 95%;
             }
         }
     }

@@ -27,7 +27,7 @@
     </div>
     <div class="in-view">
         <InView thresholdPercent={10}>
-            <img src={VoiceChannelWithHinaVisual} alt="being in the same vc as hina" in:Zoom={{ duration: 300 }} />
+            <img src={VoiceChannelWithHinaVisual} alt="being in the same vc as hina" in:Zoom={{ duration: 150 }} />
         </InView>
     </div>
 </div>
@@ -108,6 +108,16 @@
             .in-view {
                 display: flex;
                 justify-content: center;
+            }
+        }
+    }
+
+    @media (max-width: 670px) {
+        .music-section {
+            margin: 2em 0;
+
+            .text {
+                width: 95%;
             }
         }
     }
